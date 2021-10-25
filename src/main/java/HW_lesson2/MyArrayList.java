@@ -1,35 +1,48 @@
 package HW_lesson2;
 
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+import java.util.Random;
 
 public class MyArrayList<T extends Comparable<T>> {
     private T[] list;
     private int size;
+    private int capacity;
     private final int DEFAULT_CAPACITY = 10;
 
-    public MyArrayList(int capacity) {
-        if (capacity <= 0) {
-            throw new IllegalArgumentException("capacity < 0 :" + capacity);
+    public MyArrayList(int capac) {
+        if (capac <= 0) {
+            throw new IllegalArgumentException("capacity < 0 :" + capac);
         }
-        list = (T[]) new Comparable[capacity];
+        list = (T[]) new Comparable[capac];
+        capacity=capac;
     }
 
     public MyArrayList() {
         list = (T[]) new Comparable[DEFAULT_CAPACITY];
+        capacity = DEFAULT_CAPACITY;
     }
 
     public void add(T item) {
-        //проверить на переполнение.  при заполнении пересоздать внутренний массив
-        // размером capacity *1.5 +1
+        if (size == capacity) {
+            capacity = (int) (capacity*1.5 +1);
+            arrayUp();
+        }
         list[size] = item;
         size++;
     }
 
-    public void add(int index, T item) {
-        //проверить на переполнение.  при заполнении пересоздать внутренний массив
-        // размером capacity *1.5 +1
-        // проверить index
 
+
+    public void add(int index, T item) {
+        if (size == capacity) {
+            capacity = (int) (capacity*1.5 +1);
+            arrayUp();
+        }
+        if (index < 0 | index > capacity) {
+            throw new IllegalArgumentException("index incorrect:" + index);
+        }
         for (int i = size; i > index; i--) {
             list[i] = list[i - 1];
         }
@@ -38,8 +51,9 @@ public class MyArrayList<T extends Comparable<T>> {
     }
 
     public final T delete(int index) {
-        //проверить index
-
+        if (index < 0 | index > size) {
+            throw new IllegalArgumentException("index incorrect:" + index);
+        }
         T temp = list[index];
         for (int i = index; i < size; i++) {
             list[i] = list[i + 1];
@@ -58,13 +72,9 @@ public class MyArrayList<T extends Comparable<T>> {
     }
 
     public T get(int index) {
-        //проверить index
-        return list[index];
-    }
-
-    public void set(int index, T item) {
-        //проверить index
-        list[index] = item;
+        if (index < 0 | index > size) {
+            throw new IllegalArgumentException("index incorrect:" + index);
+        }        return list[index];
     }
 
     public int indexOf(T item) {
@@ -91,6 +101,19 @@ public class MyArrayList<T extends Comparable<T>> {
         return size == 0;
     }
 
+
+    private void arrayUp(){
+        T[] newArray = (T[]) new Comparable[capacity];
+        System.arraycopy(list, 0, newArray, 0, size);
+        list = newArray;
+    }
+
+    public void mixArray(){
+    Random rand = new Random (47);
+    Collections.shuffle(Arrays.asList(list), rand);
+    }
+
+
     @Override
     public String toString() {
         return Arrays.toString(Arrays.copyOf(list, size));
@@ -106,7 +129,6 @@ public class MyArrayList<T extends Comparable<T>> {
         list[index2] = temp;
     }
 
-    //O(n * n)
     public void selectionSort() {
         for (int i = 0; i < size - 1; i++) {
             int iMin = i;
