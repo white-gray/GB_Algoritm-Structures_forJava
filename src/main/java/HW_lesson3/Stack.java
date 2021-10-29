@@ -4,24 +4,24 @@ import java.util.Arrays;
 
 class Stack{
     private int maxSize;
-    private String[] stack;
+    private Object[] stack;
     private int top;
 
     public Stack(int size){
         this.maxSize = size;
-        this.stack = new String[this.maxSize];
+        this.stack = new Object[this.maxSize];
         this.top = -1;
     }
 
-    public void push(String i){
+    public void push(Object i){
         this.stack[++this.top] = i;
     }
 
-    public String  pop(){
+    public Object  pop(){
         return this.stack[this.top--];
     }
 
-    public String peek(){
+    public Object peek(){
         return this.stack[this.top];
     }
 
