@@ -1,6 +1,7 @@
 package HW_lesson3;
 
 import java.util.Arrays;
+import java.util.concurrent.Callable;
 
 public class Dec {
     private int maxSize;
@@ -26,7 +27,6 @@ public class Dec {
             this.dec[i + 1] = this.dec[i];
             this.dec[i] = null;
         }
-
     }
 
     public void insertRight(Object i) {
@@ -39,6 +39,7 @@ public class Dec {
         if (isFull()) {
             throw new IllegalArgumentException("Dec is full!!!");
         }
+        System.out.println();
     }
 
 
