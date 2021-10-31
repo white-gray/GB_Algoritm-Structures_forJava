@@ -1,8 +1,6 @@
 package HW_lesson2;
 
-import java.util.*;
-import java.util.function.Predicate;
-import java.util.function.UnaryOperator;
+import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
@@ -40,14 +38,6 @@ public class Main {
         mal.bubbleSortOpt();
         System.out.println("Выполнение операции bubbleSortOpt заняло: " + (System.currentTimeMillis() - start) / 1000 + "сек");
 //        System.out.println(mal);
-
-
-
-
-
-
-
-
 
 
     }
