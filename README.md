@@ -1,6 +1,8 @@
 # GB_Algoritm-Structures_forJava HW for lesson 4
 
-прописат Stack через связный список 
+
+
+прописат Stack через связный список
 
 	Now we have: mls.display() = []
 				mls.isEmpty() = true

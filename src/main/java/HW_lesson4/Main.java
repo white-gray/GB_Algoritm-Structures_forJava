@@ -18,7 +18,7 @@ public class Main {
 
         int sizeStack=mls.size();
         for (int q = 0; q < sizeStack; q++) {
-            System.out.println("\nWe pop and now we have");
+            System.out.println("\nWe will pop and now we have");
             System.out.println("\tmls.верхний элемент() = " + mls.peek());
             System.out.println("\tmls.display() = " + mls.display());
             System.out.println("\tmls.size() = " + mls.size());
