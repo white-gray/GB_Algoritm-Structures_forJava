@@ -1,12 +1,46 @@
-# GB_Algoritm-Structures_forJava HW for lesson 3
+# GB_Algoritm-Structures_forJava HW for lesson 4
 
+прописат Stack через связный список 
 
-прописаны очереди: Stack и Дек
+	Now we have: mls.display() = []
+				mls.isEmpty() = true
 
-Результат:
-    Введите строку: 
-	12345678910
-	01987654321
-	Stack{stack=[1, 2, 3, 4, 5, 6, 7, 8, 9, 1, 0]}
-	Dec{dec=[0, 9, 7, 5, 3, 1, 2, 4, 6, 8, 1]}
-	Dec{dec=[7, 5, 3, 1, null, null, null, 2, 4, 6, 8]}
+	We will pop and now we have
+		mls.верхний элемент() = 5
+		mls.display() = [5, 4, 3, 2, c, b, a, 1]
+		mls.size() = 8
+
+	We will pop and now we have
+		mls.верхний элемент() = 4
+		mls.display() = [4, 3, 2, c, b, a, 1]
+		mls.size() = 7
+
+	We will pop and now we have
+		mls.верхний элемент() = 3
+		mls.display() = [3, 2, c, b, a, 1]
+		mls.size() = 6
+
+	We will pop and now we have
+		mls.верхний элемент() = 2
+		mls.display() = [2, c, b, a, 1]
+		mls.size() = 5
+
+	We will pop and now we have
+		mls.верхний элемент() = c
+		mls.display() = [c, b, a, 1]
+		mls.size() = 4
+
+	We will pop and now we have
+		mls.верхний элемент() = b
+		mls.display() = [b, a, 1]
+		mls.size() = 3
+
+	We will pop and now we have
+		mls.верхний элемент() = a
+		mls.display() = [a, 1]
+		mls.size() = 2
+
+	We will pop and now we have
+		mls.верхний элемент() = 1
+		mls.display() = [1]
+		mls.size() = 1
