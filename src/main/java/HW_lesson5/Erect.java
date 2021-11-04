@@ -41,7 +41,7 @@ public class Erect {
             digit = Integer.valueOf(arrayFromText[0]);
             degree = Integer.valueOf(arrayFromText[1]);
         } catch (Exception err) {
-            System.err.println(err.toString()+"\n");
+            System.err.println(err.toString() + "\n");
             return -1;
         }
         if (degree < 0) {
@@ -56,7 +56,7 @@ public class Erect {
      * */
     private static String enterStrung() {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Введите два числа через пробел: ");
+        System.out.println("Введите два числа через пробел (посчитается первое в степени второго): ");
         String text = sc.nextLine();
         return text;
     }
