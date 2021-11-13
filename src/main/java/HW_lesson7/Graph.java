@@ -20,7 +20,7 @@ public class Graph {
 
     public void addEdge(int v1, int v2) {
         if (v1 < 0 || v2 < 0 || v1 >= vertexCount || v2 >= vertexCount) {
-            throw new IllegalArgumentException();
+            throw new IllegalArgumentException("v1 = "+v1 + "   v2 = " + v2 + "   vertexCount = " + vertexCount);
         }
         adjList[v1].add(v2);
         if (v1 != v2) {
@@ -30,6 +30,7 @@ public class Graph {
     }
 
     public LinkedList<Integer> getAdjList(int vertex) {
+
         return (LinkedList<Integer>) adjList[vertex].clone();
     }
 
