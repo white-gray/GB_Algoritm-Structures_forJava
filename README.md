@@ -1,4 +1,4 @@
-# GB_Algoritm-Structures_forJava HW for lesson 5
+# GB_Algoritm-Structures_forJava HW for lesson 7
 
 Реализовать программу, в которой задается граф из 12 вершин. 
 Задать ребра и найти кратчайший путь с помощью поиска в ширину.
