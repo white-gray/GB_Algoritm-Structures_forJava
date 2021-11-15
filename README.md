@@ -1,32 +1,65 @@
-# GB_Algoritm-Structures_forJava HW for lesson 7
+# GB_Algoritm-Structures_forJava HW for lesson 8
 
-Реализовать программу, в которой задается граф из 12 вершин. 
-Задать ребра и найти кратчайший путь с помощью поиска в ширину.
+Создать метод удаления в ChainingHashMap.
 
-сделать рисунок графа
-найти кратчайший путь, вывести длину пути
+Добавление объектов в hash-map
+По индексу 5 находится объект 9999999
+Меняеееем!
+И теперь по индексу 5 находится объект 77777
 
-Решение:
-    отображается картинка Графа
+Использование своей ChainingHashMap
+В ChainingHashMap заполнены места с индексами
+0:	14 = a,
+1:
+2:
+3:
+4:	18 = a, 81 = a,
+5:	33 = a,
+6:	27 = a, 55 = a, 76 = a,
 
-    В терминале выводится:
-        getEdgeCount() = 13
-        getAdjList(2) = [1, 3, 6]
-        getAdjList(0) = [12, 1]
-        getAdjList(7) = [1]
-        getAdjList(9) = [6]
-        getAdjList(12) = [0]
-        dfp.hasPathTo(7) = true
-        dfp.pathTo(7) = [7] длина пути = 1
-        dfp.hasPathTo(8) = true
-        dfp.pathTo(8) = [2, 3, 4, 5, 8] длина пути = 5
-        dfp.hasPathTo(1) = true
-        dfp.pathTo(1) = [] длина пути = 0
-        dfp.hasPathTo(12) = true
-        dfp.pathTo(12) = [0, 12] длина пути = 2
-        bfp.hasPathTo(7) = true
-        bfp.hasPathTo(7) = [7] длина пути = 1
-        bfp.hasPathTo(3) = true
-        bfp.hasPathTo(3) = [2, 3] длина пути = 2
-        bfp.hasPathTo(11) = true
-        bfp.hasPathTo(11) = [2, 3, 4, 11] длина пути = 4
+	Удаление 3-го попавшегося key:
+	Теперь ChainingHashMap заполнены места с индексами
+		0:	14 = a, 
+		1:	
+		2:	
+		3:	
+		4:	18 = a, 81 = a, 
+		5:	33 = a, 
+		6:	null = null, 55 = a, 76 = a, 
+
+	Удаление первой не пустой строки:
+	Теперь ChainingHashMap заполнены места с индексами
+		0:	
+		1:	
+		2:	
+		3:	
+		4:	18 = a, 81 = a, 
+		5:	33 = a, 
+		6:	null = null, 55 = a, 76 = a, 
+
+
+использование своей LinearProbingHashMap
+по индексу 5 находится объект 	qwe
+по индексу 15 находится объект 	qweerwer
+суммарно в ChainingHashMap находтся объекты
+null = null
+null = null
+null = null
+null = null
+null = null
+5 = qwe
+null = null
+null = null
+null = null
+null = null
+null = null
+null = null
+null = null
+null = null
+null = null
+15 = qweerwer
+null = null
+null = null
+null = null
+null = null
+null = null
